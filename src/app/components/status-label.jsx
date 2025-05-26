@@ -2,6 +2,9 @@ import React from 'react';
 import clsx from 'clsx';
 
 export default function StatusLabelProps({ children, status, disabled }) {
+  const key = process.env.CRM_secret_KEY;
+  // console.log(key);
+
   return (
     <div
       className={clsx(
