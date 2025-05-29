@@ -1,7 +1,6 @@
 'use client';
-
-import Button from '@/app/components/button.jsx';
 import React from 'react';
+import Button from '../../components/button.jsx';
 
 export default function Error({ error, reset }) {
   return (

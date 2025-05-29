@@ -1,10 +1,9 @@
+import CompanyRow from '../../components/company-row.jsx';
+import CompanyTable from '../../components/company-table.jsx';
+import Header from '../../components/header.jsx';
+import SearchInput from '../../components/search-input.jsx';
+import Toolbar from '../../components/toolbar.jsx';
 import React from 'react';
-
-import Header from '@/app/components/header.jsx';
-import Toolbar from '@/app/components/toolbar.jsx';
-import SearchInput from '@/app/components/search-input.jsx';
-import CompanyTable from '@/app/components/company-table.jsx';
-import CompanyRow from '@/app/components/company-row.jsx';
 
 export default function Page() {
   return (
