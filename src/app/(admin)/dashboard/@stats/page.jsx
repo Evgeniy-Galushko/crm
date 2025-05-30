@@ -1,6 +1,7 @@
 import React from 'react';
 import { getSummaryStats } from '../../../../lib/api.js';
 import StatCard from '../../../components/stat-card/stat-card.jsx';
+import Link from 'next/link.js';
 
 // export interface PageProps {}
 
@@ -17,13 +18,13 @@ export default async function Page({}) {
   return (
     <div className="grid grid-cols-12 gap-5">
       {Object.keys(labelByStat).map((key) => (
-        <div key={key} className="col-span-3">
+        <Link href={`dashboard/${key}`} key={key} className="col-span-3">
           <StatCard
             type={'gradient'}
             label={labelByStat[key]}
             counter={data[key]}
           />
-        </div>
+        </Link>
       ))}
     </div>
   );
