@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
-import StatusLabel from '@/app/components/status-label';
+import StatusLabel from '../components/status-label.jsx';
 
 const labelByStatus = {
   StatusActive: 'Active',

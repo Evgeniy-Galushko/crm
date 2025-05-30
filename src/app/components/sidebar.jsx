@@ -2,8 +2,9 @@
 
 import React from 'react';
 import Image from 'next/image';
-import SidebarItem from '@/app/components/sidebar-item';
+// import SidebarItem from '@/app/components/sidebar-item';
 import { usePathname, useRouter } from 'next/navigation.js';
+import SidebarItem from './sidebar-item.jsx';
 
 export default function Sidebar({}) {
   const router = useRouter();

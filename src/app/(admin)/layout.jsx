@@ -1,4 +1,4 @@
-import Sidebar from '@/app/components/sidebar.jsx';
+import Sidebar from '../components/sidebar.jsx';
 import React from 'react';
 
 export default function Layout({ children }) {
