@@ -1,19 +1,21 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Button from './button.jsx';
-import dynamic from 'next/dynamic.js';
+import { useRouter } from 'next/navigation';
+// import dynamic from 'next/dynamic.js';
 // import CompanyFormModal from './company-form-modal.jsx';
 
-const CompanyFormModal = dynamic(() => import('./company-form-modal.jsx'), {
-  ssr: false,
-});
+// const CompanyFormModal = dynamic(() => import('./company-form-modal.jsx'), {
+//   ssr: false,
+// });
 
 export default function AddCompanyButton({}) {
-  const [show, setShow] = useState(false);
+  const router = useRouter();
+
   return (
     <>
-      <Button
+      {/* <Button
         onClick={() => {
           setShow(true);
         }}
@@ -26,7 +28,9 @@ export default function AddCompanyButton({}) {
         onClose={() => {
           setShow(false);
         }}
-      />
+      /> */}
+
+      <Button onClick={() => router.push('/companies/new')}>Add company</Button>
     </>
   );
 }

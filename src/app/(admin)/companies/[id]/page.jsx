@@ -13,8 +13,12 @@ export default function Page({ params }) {
   }, [params.id]);
   return (
     <>
-      <Header>Companies ({params.id})</Header>
-      <p>{new Date().toTimeString()}</p>
+      {/* <Header>Companies ({params.id})</Header>
+      <p>{new Date().toTimeString()}</p> */}
+
+      <div className="py-6 px-10">
+        <p>{`Information about company (${params.id})`}</p>
+      </div>
     </>
   );
 }
