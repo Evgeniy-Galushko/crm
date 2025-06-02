@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Button from './button.jsx';
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation.js';
 // import dynamic from 'next/dynamic.js';
 // import CompanyFormModal from './company-form-modal.jsx';
 

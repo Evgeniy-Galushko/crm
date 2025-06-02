@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation.js';
 import Modal from '@/app/components/modal.jsx';
 import CompanyForm from '@/app/components/company-form.jsx';
 
