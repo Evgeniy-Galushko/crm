@@ -2,7 +2,7 @@ import Sidebar from '../components/sidebar.jsx';
 import React from 'react';
 
 export default function Layout({ children }) {
-  console.log('rengering');
+  // console.log('rengering');
   return (
     <>
       <Sidebar />
