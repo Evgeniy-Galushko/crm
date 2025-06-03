@@ -1,10 +1,14 @@
 import React from 'react';
 import clsx from 'clsx';
 
-export default function StatusLabelProps({ children, status, disabled }) {
-  const key = process.env.CRM_secret_KEY;
-  // console.log(key);
+const labelByStatus = {
+  active: 'Active',
+  notActive: 'Not Active',
+  pending: 'Pending',
+  suspended: 'Suspended',
+};
 
+export default function StatusLabelProps({ status, disabled }) {
   return (
     <div
       className={clsx(
@@ -17,7 +21,7 @@ export default function StatusLabelProps({ children, status, disabled }) {
       )}
     >
       <div className="w-1 h-1 mr-2 rounded-full bg-current" />
-      {children}
+      {labelByStatus[status]}
     </div>
   );
 }

@@ -211,3 +211,19 @@ export const getPromotions = async (params, init) => {
     init,
   );
 };
+
+export const createPromotion = async (data, init) => {
+  return (
+    sendRequest <
+    Promotion >
+    (buildUrl('promotions'),
+    {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        ...(init && init.headers),
+        'content-type': 'application/json',
+      },
+    })
+  );
+};
