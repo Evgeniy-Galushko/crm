@@ -5,9 +5,10 @@ import React from 'react';
 
 // export interface PageProps {}
 
-export default function Page({ params }) {
+export default async function Page({ params }) {
+  const { id } = await params;
   return (
-    <Toolbar action={<AddPromotionButton companyId={params.id} />}>
+    <Toolbar action={<AddPromotionButton companyId={id} />}>
       <SearchInput />
     </Toolbar>
   );

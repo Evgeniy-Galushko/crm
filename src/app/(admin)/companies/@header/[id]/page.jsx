@@ -8,15 +8,16 @@ import React from 'react';
 // }
 
 export default async function Page({ params }) {
+  const { id } = await params;
   const queryClient = getQueryClient();
 
   await queryClient.prefetchQuery({
-    queryKey: ['companies', params.id],
-    queryFn: () => getCompany(params.id, { cache: 'no-store' }),
+    queryKey: ['companies', id],
+    queryFn: () => getCompany(id, { cache: 'no-store' }),
     staleTime: 10 * 1000,
   });
 
-  const company = queryClient.getQueryData(['companies', params.id]);
+  const company = queryClient.getQueryData(['companies', id]);
 
   return <Header>{company?.title}</Header>;
 }

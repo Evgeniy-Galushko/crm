@@ -9,6 +9,7 @@ import Promotion from '@/app/components/promotion';
 // }
 
 export default function CompanyPromotions({ companyId }) {
+  console.log(companyId);
   const { data } = useQuery({
     queryKey: ['promotions', companyId],
     queryFn: () => getPromotions({ companyId }),
